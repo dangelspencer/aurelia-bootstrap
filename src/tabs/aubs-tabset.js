@@ -41,7 +41,7 @@ export class AubsTabsetCustomElement {
     }
 
     selectTab(tab, force = false) {
-        if (tab.disabled && !force) {
+        if (!tab || (tab.disabled && !force)) {
             return;
         }
 

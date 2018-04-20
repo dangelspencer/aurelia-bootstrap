@@ -89,7 +89,7 @@ export let AubsTabsetCustomElement = (_dec = children({ name: "tabs", selector: 
     }
 
     selectTab(tab, force = false) {
-        if (tab.disabled && !force) {
+        if (!tab || tab.disabled && !force) {
             return;
         }
 

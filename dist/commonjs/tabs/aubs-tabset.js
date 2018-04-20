@@ -103,7 +103,7 @@ var AubsTabsetCustomElement = exports.AubsTabsetCustomElement = (_dec = (0, _aur
     AubsTabsetCustomElement.prototype.selectTab = function selectTab(tab) {
         var force = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 
-        if (tab.disabled && !force) {
+        if (!tab || tab.disabled && !force) {
             return;
         }
 
